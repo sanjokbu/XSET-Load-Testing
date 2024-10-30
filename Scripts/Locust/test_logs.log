@@ -1,0 +1,6 @@
+2024-10-30 19:54:53,950 INFO: Used loadshape_type: baseline
+2024-10-30 19:54:53,962 INFO: BuyUserClass started. Host: http://localhost:1080
+2024-10-30 19:54:53,963 INFO: Imported BuyUserClass
+2024-10-30 20:11:45,127 INFO: Used loadshape_type: baseline
+2024-10-30 20:11:45,139 INFO: BuyUserClass started. Host: http://localhost:1080
+2024-10-30 20:11:45,140 INFO: Imported BuyUserClass
