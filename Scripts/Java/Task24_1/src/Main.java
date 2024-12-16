@@ -36,7 +36,7 @@ public class Main {
 		for (String word : wordsList){
 			int count = 0;
 
-			regex = word + "[,.\\s]";
+			regex = "\\b" + word + "\\b[,.\\s]";
 			pattern = Pattern.compile(regex);
 			matcher = pattern.matcher(text.toLowerCase());
 
