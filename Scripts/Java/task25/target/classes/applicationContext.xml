@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+
+    <bean id="accumulator" class="ru.task.task25.Accumulator"> </bean>
+    <bean id="differential" class="ru.task.task25.Differential"> </bean>
+    <bean id="hinge" class="ru.task.task25.Hinge"> </bean>
+    <bean id="sparkPlug" class="ru.task.task25.SparkPlug"> </bean>
+    <bean id="starter" class="ru.task.task25.Starter"> </bean>
+    <bean id="wheel" class="ru.task.task25.Wheel"> </bean>
+
+    <bean id="suspension" class="ru.task.task25.Suspension">
+        <property name="hinge" ref="hinge"/>
+        <property name="differential" ref="differential"/>
+    </bean>
+
+    <bean id="engine" class="ru.task.task25.Engine">
+        <constructor-arg ref="starter"/>
+        <constructor-arg ref="sparkPlug"/>
+    </bean>
+
+
+    <bean id="myCar" class="ru.task.task25.Car">
+        <constructor-arg ref="wheel"/>
+        <constructor-arg ref="suspension"/>
+        <constructor-arg ref="engine"/>
+        <constructor-arg ref="accumulator"/>
+    </bean>
+
+</beans>
